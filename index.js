@@ -56,6 +56,14 @@ Array.from(buttons).forEach((button) => {
         document.getElementsByClassName("simpleInput")[i].value += "Math.E";
       } else if (symbol == "|x|") {
         document.getElementsByClassName("simpleInput")[i].value += "Math.abs(";
+      } else if (symbol == "") {
+        let str = document.getElementsByClassName("simpleInput")[i].value;
+        if (str.length == 1) {
+          str = "";
+        } else {
+          str = str.slice(0, str.length - 1);
+        }
+        document.getElementsByClassName("simpleInput")[i].value = str;
       } else if (symbol == "e<sup>x</sup>") {
         document.getElementsByClassName("simpleInput")[i].value += "Math.exp(";
       } else {
